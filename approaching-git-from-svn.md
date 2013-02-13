@@ -24,6 +24,8 @@ developers working on a rapidly changing code base. Some examples:
   integrating upstream changes.
 - Git is distributed so that you and everyone else can make all manner of
   branches and experiments without dirtying up the master repo.
+- Git gets easier in general once you realize that branches are nothing more than
+  homeomorphic endofunctors mapping submanifolds of a Hilbert space.
 
 Git **is** different from svn, but it does well what it is designed to do.
 This brings me back to the Lao Tsu quote from the top and a simple message
