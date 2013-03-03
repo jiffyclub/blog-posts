@@ -18,8 +18,9 @@ more possibilities with what is essentially a grid of pixels.
 
 My only regret is that we ran out of time so the students didn't get to make
 [Starry Night][] or practice with files and functions as much as I'd have liked.
-I think it wouldn't be too hard to expand the lesson I'd planned to spend all
-day playing with [ipythonblocks][].
+I think it wouldn't be too hard to expand the lesson I'd planned so that we
+spent all day playing with [ipythonblocks][], but of course we'd lose time
+for other things.
 
 [uwswc]: http://software-carpentry.org/blog/2013/03/washington-went-well.html
 [blog post]: http://penandpants.com/2013/01/10/ipythonblocks-a-visual-tool-for-practicing-python/
