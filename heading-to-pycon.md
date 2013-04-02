@@ -6,7 +6,7 @@ and I'm really excited!
 On Wednesday I'm taking a couple of data oriented tutorials:
 [Introduction to Pydata][pydata] and  [Bayesian statistics made simple][bayes].
 I already know quite a bit on those topics but I'm looking forward to learning
-more about [pandas][] and  [PyTables][], and it can't hurts to brush up on
+more about [pandas][] and  [PyTables][], and it can't hurt to brush up on
 my statistics.
 
 # Education Summit
