@@ -1,12 +1,15 @@
 These instructions detail how I install the scientific Python stack on my
-Mac. I'm running the latest OS X Mountain Lion but I think these instructions
-should work back to Snow Leopard. These instructions differ from my
-[previous set][old-instr] primarily in that I now use [Homebrew][] to
+Mac. You can always check the [Install Python][] page for other installation
+options.
+
+I'm running the latest OS X Mountain Lion (10.8) but I think these
+instructions should work back to Snow Leopard (10.6). These instructions differ
+from  my [previous set][old-instr] primarily in that I now use [Homebrew][] to
 install [NumPy][], [SciPy][], and [matplotlib][]. I do this because Homebrew
 makes it easier to compile these with non-standard options that work around
 an [issue with SciPy on OS X][scipy-issue].
 
-I cover here how to install Python and the basic scientific Python stack:
+I'll show how I install Python and the basic scientific Python stack:
 
 - [NumPy][]
 - [SciPy][]
@@ -14,7 +17,7 @@ I cover here how to install Python and the basic scientific Python stack:
 - [IPython][]
 - [pandas][]
 
-If you need other libraries they most likely can be installed via [pip][] and
+If you need other libraries they can most likely be installed via [pip][] and
 any dependencies can probably be installed via [Homebrew][].
 
 # Command Line Tools
@@ -39,7 +42,7 @@ To install Homebrew paste the following in a terminal:
 
     ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
-The `brew` command and binaries it installs will go in the directory
+The `brew` command and any executables it installs will go in the directory
 `/usr/bin/local` so you want to make sure that goes at the front of your
 system's `PATH`. As long as you're at it, you can also add the directory where
 Python scripts get installed. Add the following line to your `.profile`,
@@ -83,16 +86,17 @@ You can learn more about these at their respective repositories:
 * [homebrew/science][homebrew-science]
 * [samueljohn/python][samueljohn-python]
 
-With those repos tapped you can install NumPy. I install it against
-[OpenBLAS][] to avoid [a SciPy issue][scipy-issue]:
+With those repos tapped you can install NumPy. I compile it against
+[OpenBLAS][] to avoid [a SciPy issue][scipy-issue]. Compiling OpenBLAS requires
+gfortran, which you can get via Homebrew:
 
+    brew install gfortran
     brew install numpy --with-openblas
 
 # SciPy
 
-[SciPy][] requires gfortran, which can be installed by Homebrew:
+And then you're ready for [SciPy][]:
 
-    brew install gfortran
     brew install scipy --with-openblas
 
 # matplotlib
@@ -132,6 +136,7 @@ an IPython  session and type in the following:
 If there are no errors then you're ready to get started!
 Congratulations and enjoy!
 
+[Install Python]: http://penandpants.com/install-python/
 [old-instr]: http://penandpants.com/2012/02/24/install-python/
 [Homebrew]: http://brew.sh/
 [NumPy]: http://www.numpy.org/
