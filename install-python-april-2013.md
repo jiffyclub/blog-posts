@@ -48,7 +48,7 @@ system's `PATH`. As long as you're at it, you can also add the directory where
 Python scripts get installed. Add the following line to your `.profile`,
 `.bash_profile`, or `.bashrc` file:
 
-    export PATH=/usr/bin/local:/usr/bin/local/share/python:$PATH
+    export PATH=/usr/local/bin:/usr/local/share/python:$PATH
 
 At this point you should close your terminal and open a new one so that this
 `PATH` setting is in effect for the rest of the installation.
@@ -86,9 +86,13 @@ You can learn more about these at their respective repositories:
 * [homebrew/science][homebrew-science]
 * [samueljohn/python][samueljohn-python]
 
-With those repos tapped you can install NumPy. I compile it against
-[OpenBLAS][] to avoid [a SciPy issue][scipy-issue]. Compiling OpenBLAS requires
-gfortran, which you can get via Homebrew:
+With those repos tapped you can almost install NumPy, but first you'll have
+to use `pip` to install [nose][]:
+
+    pip install nose
+
+I compile NumPy against [OpenBLAS][] to avoid [a SciPy issue][scipy-issue].
+Compiling OpenBLAS requires gfortran, which you can get via Homebrew:
 
     brew install gfortran
     brew install numpy --with-openblas
@@ -150,6 +154,7 @@ Congratulations and enjoy!
 [pip]: https://pypi.python.org/pypi/pip
 [homebrew-science]: https://github.com/Homebrew/homebrew-science
 [samueljohn-python]: https://github.com/samueljohn/homebrew-python
+[nose]: https://nose.readthedocs.org/en/latest/
 [OpenBLAS]: http://xianyi.github.com/OpenBLAS/
 [ZeroMQ]: http://www.zeromq.org/
 [Notebook]: http://ipython.org/notebook.html
