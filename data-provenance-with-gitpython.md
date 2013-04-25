@@ -38,6 +38,33 @@ Git repos from Python and one thing we can do is query a repo to get the
 [commit hash][] of the current "[HEAD][]". (`HEAD` is a label in Git pointing
 to the latest commit of whatever state the repository is currently in.)
 
+What we can do with that is make it so that when our software modules are
+imported they set a global variable containing the commit hash of their `HEAD`
+at the time the software was run. That hash can then be inserted into data
+products as a record of the software version used to create them. Here's
+some code that gets and stores the hash of the `HEAD` of a repo:
+
+    from git import Repo
+    MODULE_HASH = Repo('/path/to/repo/').head.commit.hexsha
+
+If the module we're importing is actually inside a Git repo we can use a bit
+of Python magic to get the `HEAD` hash without manually listing the path
+to the repo:
+
+    import os.path
+    from git import Repo
+    MODULE_HASH = Repo(os.path.dirname(__file__)).head.commit.hexsha
+
+# Versioned Data
+
+Some data formats, especially those that are text based, can be easily stored
+in version control. If you can put your data in a Git repo then the same
+strategy as above can be used to get and store the `HEAD` commit of the data
+repo when you run your analysis, allowing you to reproduce both your software
+and data states during later runs. If your data does not easily fit into Git
+it's still a good idea to record a unique identifier for the dataset, but you
+may need to develop that yourself.
+
 [best practices paper]: http://arxiv.org/abs/1210.0530
 [provenance]: http://en.wikipedia.org/wiki/Provenance#Data_provenance
 [reproducibility]: http://en.wikipedia.org/wiki/Reproducibility
