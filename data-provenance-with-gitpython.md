@@ -15,6 +15,7 @@ However, a lot of personal or lab software doesn't have a version number.
 The software might change so fast and be modified by so many people that
 manually incrememented version numbers aren't very practical. There's still
 hope in this situation, though, if the software is under [version control][].
+(Your software [is under version control][best practices paper], isn't it?)
 In [Subversion][] the [keyword properties][] feature is often used to
 [record provenance][swc svn provenance]. There isn't a compatible feature
 in [Git][], but for Python software in Git repositories we can engineer a
@@ -33,10 +34,12 @@ your software back to that state to reproduce the same results. Very handy!
 
 When you import a [Python module][], code at the global level of the module is
 actually executed. This is often used to set global variables within the
-module, which is what we'll do here. [GitPython][] lets us interact with
-Git repos from Python and one thing we can do is query a repo to get the
-[commit hash][] of the current "[HEAD][]". (`HEAD` is a label in Git pointing
-to the latest commit of whatever state the repository is currently in.)
+module, which is what we'll do here.
+
+[GitPython][] lets us interact with Git repos from Python and one thing we can
+do is query a repo to get the [commit hash][] of the current "[HEAD][]".
+(`HEAD` is a label in Git pointing to the latest commit of whatever state the
+repository is currently in.)
 
 What we can do with that is make it so that when our software modules are
 imported they set a global variable containing the commit hash of their `HEAD`
@@ -53,7 +56,11 @@ to the repo:
 
     import os.path
     from git import Repo
-    MODULE_HASH = Repo(os.path.dirname(__file__)).head.commit.hexsha
+    repo_dir = os.path.abspath(os.path.dirname(__file__))
+    MODULE_HASH = Repo(repo_dir).head.commit.hexsha
+
+(`__file__` is a global variable Python automatically sets in
+[imported][] modules.)
 
 # Versioned Data
 
@@ -63,7 +70,8 @@ strategy as above can be used to get and store the `HEAD` commit of the data
 repo when you run your analysis, allowing you to reproduce both your software
 and data states during later runs. If your data does not easily fit into Git
 it's still a good idea to record a unique identifier for the dataset, but you
-may need to develop that yourself.
+may need to develop that yourself (such as a simple list of all the data files
+that were used as inputs).
 
 [best practices paper]: http://arxiv.org/abs/1210.0530
 [provenance]: http://en.wikipedia.org/wiki/Provenance#Data_provenance
@@ -79,5 +87,6 @@ may need to develop that yourself.
 [git checkout]: https://www.kernel.org/pub/software/scm/git/docs/git-checkout.html
 [GitPython]: http://pythonhosted.org/GitPython/0.3.1/index.html
 [Python module]: http://docs.python.org/2/tutorial/modules.html
-[commit hash]: http://docs.python.org/2/tutorial/modules.html
+[commit hash]: http://git-scm.com/book/en/Getting-Started-Git-Basics#Git-Has-Integrity
 [HEAD]: http://www.gitguys.com/topics/head-where-are-we-where-were-we/
+[imported]: http://docs.python.org/2/reference/simple_stmts.html#the-import-statement
