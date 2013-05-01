@@ -24,7 +24,20 @@ not the case, [email me][] or [tweet me][] and I will see if I can help.)
 
 # Diversity at SciPy
 
+I've been going to SciPy since 2010 and every year the attendees and speakers
+have been disappointingly white and male. Last year [Andy Terrel][andy] and
+[I][scipy2012] chided the conference organizers about this and it looks like
+this year the organizers (which include Andy) are actually trying to do
+something about diversity: there is a [Diversity Statement][diversity],
+a [Code of Conduct][conduct], and [pyladies][] will be there as a community
+sponsor.
 
+If you're not sure about SciPy because you're worried you won't fit in or won't
+be welcome I want to be the first to tell you that you don't need to worry and
+that you should come. Everyone who comes to SciPy has agreed to abide by the
+[Code of Conduct][conduct] and the conference organizers are there to help if
+you experience any problems. SciPy is a conference for everyone and having a
+more diverse community is good for all of us.
 
 [SciPy 2013]: http://conference.scipy.org/scipy2013/
 [tutorials]: http://conference.scipy.org/scipy2013/tutorials.php
@@ -32,3 +45,8 @@ not the case, [email me][] or [tweet me][] and I will see if I can help.)
 [swc-tutorial]: http://conference.scipy.org/scipy2013/tutorial_detail.php?id=106
 [email me]: mailto:jiffyclub@gmail.com
 [tweet me]: https://twitter.com/jiffyclub
+[andy]: http://andy.terrel.us/blog/2012/10/08/thoughts-on-the-scipy-conference/
+[scipy2012]: http://penandpants.com/2012/07/25/scipy-2012/
+[diversity]: http://conference.scipy.org/scipy2013/diversity.php
+[conduct]: http://conference.scipy.org/scipy2013/code_of_conduct.php
+[pyladies]: http://www.pyladies.com/
