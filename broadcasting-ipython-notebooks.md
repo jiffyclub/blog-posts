@@ -1,11 +1,11 @@
 A useful feature of the [IPython Notebook][] is that you can set the server to
 broadcast so that others on your local network can see the server and your
 notebooks. This is especially nice as a teacher so that students can load
-your notebooks as your work, copy text out of them, and see them in their
+your notebooks as you work, copy text out of them, and see them in their
 entirety instead of just what you have on screen. Here's the outline of what
 to do, with detailed instructions below:
 
-1. Create an IPython profile with a password for Notebooks.
+1. Create an IPython profile with a password for the Notebook server.
 2. Figure out your IP address on the local network.
 3. Launch IPython in broadcast + read-only mode using your new profile.
 4. Have your students navigate to your Notebook server.
@@ -50,7 +50,8 @@ done it should like this:
     c.NotebookApp.password = u'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
 
 And when you start the Notebook server with the teaching profile it will be
-password protected.
+password protected. You can change your password at any time be generating a
+new password hash string and pasting into `ipython_notebook_config.py`.
 
 # Find Out Your IP Address
 
@@ -58,11 +59,10 @@ Your students need to know where to point their browsers so they can see your
 notebooks and for that you need to know your IP address on the local network.
 On Macs you can get this from the Network pane of System Preferences, but I
 like to use [this Python script from Software Carpentry][get-my-ip], which
-should work on any sytem. On my home wifi my IP is usually something like
-`10.0.1.9` but it will vary depending on the configuration where you are.
-Take note of your IP address, in a minute we'll combine it with the port number
-used by the IPython Notebook server so your students can type something into
-their URL bars.
+should work on any system. On my home WiFi my IP is usually something like
+`10.0.1.9` but it will vary depending on where you are. Take note of your IP
+address, in a minute we'll combine it with the port number used by the IPython
+Notebook server so your students can type something into their URL bars.
 
 # Start The Notebook Server and Note the Port Number
 
@@ -100,7 +100,7 @@ execute code.
 
 # Some Notes
 
-* The students' view doesn't update in real time. I find that in order for them
+* The students' views don't update in real time. I find that in order for them
     to see my changes I must save my notebook and then the students have to
     manually reload. They won't see unsaved changes and they won't see any changes
     at all unless they reload.
