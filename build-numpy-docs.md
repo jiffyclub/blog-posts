@@ -23,7 +23,7 @@ I use [conda][] and all of these are readily available through that.
 Here's the list of things you'll need:
 
 - [NumPy][]
-- [SciPy][] (only required if building SciPy docs)
+- [SciPy][]
 - [matplotlib][]
 - [Sphinx][] (actually builds the docs)
 - [docutils][] (dependency of Sphinx)
