@@ -84,10 +84,10 @@ It's only in loops that the microseconds start to add up to minutes.
 
 [Pandas]: http://pandas.pydata.org/
 [NumPy]: http://www.numpy.org/
-[notebook]: https://nbviewer.ipython.org
+[notebook]: http://nbviewer.ipython.org/github/jiffyclub/blog-posts/blob/master/notebooks/indexing-series-and-arrays/indexing_series_and_arrays.ipynb
 [before]: https://github.com/synthicity/synthpop/blob/3355345b71239a61eb6a96366d0a47e45d091d46/synthpop/ipu/ipu.py
 [after]: https://github.com/synthicity/synthpop/blob/b67de3cb065c2ed4ac77a856421ec62cb6d99c58/synthpop/ipu/ipu.py
 [diff]: https://github.com/synthicity/synthpop/commit/b67de3cb065c2ed4ac77a856421ec62cb6d99c58
-[series-profile]: ./images/indexing-series-and-arrays/series_getitem.png
-[array-profile]: ./images/indexing-series-and-arrays/array_getitem.png
+[series-profile]: https://raw.githubusercontent.com/jiffyclub/blog-posts/master/images/indexing-series-and-arrays/series_getitem.png
+[array-profile]: https://raw.githubusercontent.com/jiffyclub/blog-posts/master/images/indexing-series-and-arrays/array_getitem.png
 [SnakeViz]: http://jiffyclub.github.io/snakeviz/
