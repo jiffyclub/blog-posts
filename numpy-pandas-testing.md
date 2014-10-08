@@ -9,7 +9,7 @@ error when testing:
 ```python
 In [2]: a = np.arange(10)
 
-In [3]: a = np.arange(10)
+In [3]: b = np.arange(10)
 
 In [4]: assert a == b
 ------------------------------------------------
