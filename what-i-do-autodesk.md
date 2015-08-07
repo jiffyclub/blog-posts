@@ -24,6 +24,7 @@ well documented code that will work for a long time.
 
 Day-to-day my brain power goes to things like:
 
+* Asking my colleagues questions about their needs and how they do things
 * Thinking about how to make a sensible API or UI
 * Thinking about how to actually solve a problem
 * Writing tests
