@@ -1,10 +1,10 @@
-# brewer2mpl
+# Palettable
 
-brewer2mpl is a utility for using [colorbrewer][] color maps in Python
-and with [matplotlib][].
+Palettable is a utility for using [colorbrewer][] and other
+color maps in Python and with [matplotlib][].
 
-- Homepage: https://github.com/jiffyclub/brewer2mpl/wiki
-- GitHub: https://github.com/jiffyclub/brewer2mpl
+- Homepage: https://jiffyclub.github.io/palettable/
+- GitHub: https://github.com/jiffyclub/palettable
 
 # Days Since it Rained
 
@@ -15,7 +15,7 @@ It can also display a year's worth of rainfall history.
 - Homepage: http://www.dayssinceitrained.com/
 - GitHub: https://github.com/jiffyclub/days-since-it-rained
 
-# HTML Template
+# HTML Resume Template
 
 My resume is in HTML/CSS and provide the template on GitHub.
 
