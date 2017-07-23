@@ -1,15 +1,23 @@
+This is Part 1 in a series of blog posts describing my move of
+[ipythonblogs.org][ipborg] from Rackspace to Heroku.
+In this first post I'll describe the existing deployment and what I intend
+to change during the migration.
+Other posts are:
+
+- Part 1: Introduction and Architecture
+- [Part 2][]: Data Migration
+- [Part 3][]: Database Interface
+- [Part 4][]: Application Updates
+
 As a side project I maintain a Python library called [ipythonblocks][]
 that displays colored grids in a Jupyter Notebook.
 (See also [this intro blog post][ipb-intro].)
 It can be useful for teaching or for a bit of fun art.
-I also maintain the website [ipythonblocks.org][ipborg] (down as of July 1, 2017)
+I also maintain the website [ipythonblocks.org][ipborg]
 that allows users to post their ipythonblocks grids on the internet to be shared.
 ipythonblocks.org has been hosted on [Rackspace][] since I [first launched it][ipborg-announce],
 but now I'm migrating the site to [Heroku][] for easier maintenance
 and deployment.
-I'm writing a series of blog posts documenting the move.
-In this first post I'll describe the existing deployment and what I intend
-to change during the migration.
 
 ## Rackspace Deployment
 
@@ -74,6 +82,9 @@ without problem and simplify the app logic.
 In my next post I'll describe the grid data model and how I migrated the
 existing grid data from SQLite to Postgres.
 
+[Part 2]: https://penandpants.com/2017/07/03/ipythonblocks-org-move-part-2-data-migration/
+[Part 3]: https://penandpants.com/2017/07/10/ipythonblocks-org-move-part-3-database-interface/
+[Part 4]: https://penandpants.com/2017/07/22/ipythonblocks-org-move-part-4-application-updates/
 [ipythonblocks]: https://github.com/jiffyclub/ipythonblocks
 [ipb-intro]: https://penandpants.com/2013/01/10/ipythonblocks-a-visual-tool-for-practicing-python/
 [ipborg]: http://ipythonblocks.org

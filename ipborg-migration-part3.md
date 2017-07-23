@@ -7,6 +7,7 @@ Other posts are:
 - [Part 1][]: Introduction and Architecture
 - [Part 2][]: Data Migration
 - Part 3: Database Interface Updates
+- [Part 4][]: Application Updates
 
 The big change to the database interface module was the switch from [dataset][]
 to [SQLAlchemy][] for database abstraction.
@@ -215,6 +216,7 @@ database interface code when serving requests.
 [ipborg]: http://ipythonblocks.org
 [Part 1]: https://penandpants.com/2017/07/02/ipythonblocks-org-move-part-1/
 [Part 2]: https://penandpants.com/2017/07/03/ipythonblocks-org-move-part-2-data-migration/
+[Part 4]: https://penandpants.com/2017/07/22/ipythonblocks-org-move-part-4-application-updates/
 [dataset]: https://dataset.readthedocs.io/en/latest/
 [SQLAlchemy]: http://www.sqlalchemy.org/
 [memcached]: https://memcached.org/
